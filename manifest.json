@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Farrasy",
+    "version": "1.0.0",
+    "description": "Make the Roblox website look better.",
+    "content_scripts": [
+        {
+            "matches": ["http://*.roblox.com/*", "https://*.roblox.com/*"],
+            "js": ["background.js"]
+        }
+    ]
+}
