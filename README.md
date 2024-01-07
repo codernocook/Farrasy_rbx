@@ -11,4 +11,4 @@
 5. Refresh your Roblox page.
 
 # Todo
-- [] Add chat to "Messages" tab, do not remove the chat popup.
+- [ ] Add chat to "Messages" tab, do not remove the chat popup.
