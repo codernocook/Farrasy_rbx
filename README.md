@@ -9,3 +9,6 @@
 3. Turn on Developer mode in the browser's extension page.
 4. Drag the unzipped folder into the browser's extension page.
 5. Refresh your Roblox page.
+
+# Todo
+- [] Add chat to "Messages" tab, do not remove the chat popup.
