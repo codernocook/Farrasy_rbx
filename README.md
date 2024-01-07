@@ -1,6 +1,7 @@
 # Farrasy_rbx
 
 - A theme built for [Roblox](https://roblox.com/)
+- If you like this project, please star it!
 
 # How to install?
 1. Check the github repo's release page: https://github.com/codernocook/Farrasy_rbx/releases
