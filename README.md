@@ -10,5 +10,6 @@
 4. Drag the unzipped folder into the browser's extension page.
 5. Refresh your Roblox page.
 
-# Todo
+# Todos
 - [ ] Add chat to "Messages" tab, do not remove the chat popup.
+- [ ] Add logout button at the bottom of the navigation bar.
