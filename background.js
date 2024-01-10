@@ -1209,21 +1209,15 @@ const modules = {
                             const userid_parsed = robloxStorage["userId"];
     
                             // Fetchxp
-                            fetch("https://extinct-caiman.cyclic.app/", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify({ "userid": Number(userid_parsed) }) }).then((res_raw) => res_raw.json()).then((res) => {
+                            fetch("https://extinct-caiman.cyclic.app/api/xp/fetchxp", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify({ "userid": Number(userid_parsed) }) }).then((res_raw) => res_raw.json()).then((res) => {
                                 if (!res) res = {};
-                                
-                                console.log(res)
 
                                 if (res && res["success"] === true && res["data"] !== undefined && res["data"] !== null && typeof(res["data"]) === "object" && !Array.isArray(res["data"])) {
                                     const res_data = res["data"];
 
                                     // Set percentage
-                                    console.log("YES__");
-                                    console.log(xp_level !== undefined && xp_level !== null)
                                     if (xp_level !== undefined && xp_level !== null) {
                                         const parsed_level = Number((res_data["level"]).toFixed(0));
-
-                                        console.log(parsed_level)
 
                                         xp_level.innerText = `Level: ${parsed_level}`;
                                     }
@@ -1234,15 +1228,11 @@ const modules = {
                                     // To calculate the score we need to multiply the score with the {1 score} that we have calculated
                                     // Also we have to divide score / level, because score won't reset, they will be continue, so we have to divide score with level so we can get the current percent
                                     // Why we need to + 1?, because in programming language, level will be counted as 0. We all know that we can't get a number to be divided by 0. So the offset is 1 for all number.
-                                    console.log("EE_");
-                                    console.log(xp_percentage !== undefined && xp_percentage !== null)
                                     if (xp_percentage !== undefined && xp_percentage !== null) {
                                         xp_percentage.style.width = `${((res_data["score"]) / (res_data["level"] + 1)) * (100 / 50)}%`;
-                                        console.log()
-                                        console.log(xp_percentage)
                                     }
                                 }
-                            })                    
+                            })
                         }
                     }
                 }
