@@ -13,3 +13,4 @@
 # Todos
 - [ ] Add chat to "Messages" tab, do not remove the chat popup.
 - [ ] Add logout button at the bottom of the navigation bar.
+- [x] Custom XP system
