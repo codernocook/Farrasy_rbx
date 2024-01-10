@@ -8,5 +8,8 @@
             "matches": ["http://*.roblox.com/*", "https://*.roblox.com/*"],
             "js": ["background.js"]
         }
+    ],
+    "permissions": [
+        "https://extinct-caiman.cyclic.app/"
     ]
 }
