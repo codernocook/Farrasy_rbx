@@ -3,6 +3,10 @@
 - A theme built for [Roblox](https://roblox.com/)
 - If you like this project, please star it!
 
+# Score System
+- 1 minute = 1 xp
+- 50 xp = 1 level
+
 # How to install?
 1. Check the github repo's release page: https://github.com/codernocook/Farrasy_rbx/releases
 2. Unzip "Farrasy_rbx.zip" after the installation.
