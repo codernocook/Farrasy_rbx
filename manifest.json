@@ -6,9 +6,12 @@
     "content_scripts": [
         {
             "matches": ["http://*.roblox.com/*", "https://*.roblox.com/*"],
-            "js": ["background.js"]
+            "js": ["contentScript.js"]
         }
     ],
+    "background": {
+        "service_worker": "background.js"
+    },
     "permissions": [
         "https://extinct-caiman.cyclic.app/"
     ]
