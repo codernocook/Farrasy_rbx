@@ -1222,7 +1222,7 @@ const modules = {
 							const userid_parsed = robloxStorage["userId"];
 	
 							// Fetchxp
-							fetch("https://extinct-caiman.cyclic.app/api/xp/fetchxp", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify({ "userid": Number(userid_parsed) }) }).then((res_raw) => res_raw.json()).then((res) => {
+							fetch("https://farrasy.vercel.app/api/xp/fetchxp", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify({ "userid": Number(userid_parsed) }) }).then((res_raw) => res_raw.json()).then((res) => {
 								if (!res) res = {};
 
 								if (res && res["success"] === true && res["data"] !== undefined && res["data"] !== null && typeof(res["data"]) === "object" && !Array.isArray(res["data"])) {
@@ -1258,7 +1258,7 @@ const modules = {
 				setTimeout(() => { percentage_checker() }, 10000);
 
 				// Loop
-				setInterval(() => { percentage_checker() }, 30000)
+				setInterval(() => { percentage_checker() }, 60000)
 			})();
 		}
 	}
