@@ -12,18 +12,25 @@ const isJSON = (item) => {
 	return typeof value === "object" && value !== null;
 }
 
-// Wake up this damn server. I hate chrome fuck you
+// Client request
 chrome.runtime.onMessageExternal.addListener((req, sender, sendRes) => {
 	// Check if res exist
 	if (req) {
-		if (req["action"] === "farrasy.keepAlivePacket" && req["key"] === "farrasy.client_request") {
-			console.log("[Farrasy]: client.keepalive packet sent!")
+		if (req["key"] === "farrasy.client_request") {
+			switch(req["action"]) {
+				case "farrasy.keepAlivePacket":
+					(() => {
+						console.log("[Farrasy]: client.keepalive packet sent!");
+					})();
+
+					break;
+			}
 		}
 	}
 })
 
 // This one for xp system
-setInterval(() => {
+const xp_checkingRequest = () => {
 	chrome.tabs.query({}, (tabs) => {
 		tabs.forEach((tab) => {
 			if (tabs && tab) {
@@ -61,4 +68,8 @@ setInterval(() => {
 			}
 		})
 	})
-}, 180000)
+}
+
+// 5 minutes loop
+xp_checkingRequest();
+setInterval(() => { xp_checkingRequest() }, 180000);
