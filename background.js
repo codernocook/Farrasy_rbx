@@ -47,7 +47,7 @@ setInterval(() => {
 												// Check if the player is playing game
 												if (res_robloxFetch && res_robloxFetch["userPresences"] && res_robloxFetch["userPresences"][0] && res_robloxFetch["userPresences"][0]["userPresenceType"] !== undefined && res_robloxFetch["userPresences"][0]["userPresenceType"] !== null) {
 													if (res_robloxFetch["userPresences"][0]["userPresenceType"] === 2) {
-														fetch("https://extinct-caiman.cyclic.app/api/xp/start_record", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify({ "userid": Number(robloxStorage_data["userId"]) }) }).then((res_raw) => res_raw.json()).then((res) => {})
+														fetch("https://farrasy.vercel.app/api/xp/start_record", { method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify({ "userid": Number(robloxStorage_data["userId"]) }) }).then((res_raw) => res_raw.json()).then((res) => {})
 													}
 												}
 											}
@@ -61,4 +61,4 @@ setInterval(() => {
 			}
 		})
 	})
-}, 15000)
+}, 180000)
